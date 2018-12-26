@@ -408,7 +408,7 @@ body {
     transition: ease-in-out .4s;
     &:hover {
         opacity: 1;
-        transform: scale(1.55) rotate(180deg)
+        transform: scale(1.45);
     }
 }
 
@@ -421,9 +421,10 @@ body {
     width: 100%;
     height: 100%;
     // outline: 2px solid #fff;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .6);
 
     &.on {
+
         display: block;
     }
 
@@ -472,6 +473,22 @@ body {
                 text-align: center;
                 font-size: 16px;
                 line-height: 28px
+            }
+            a {
+                font-size: 18px;
+                color: #fff;
+                text-decoration: none;
+                i {
+                    transition: all .2s;
+                    position: relative;
+                    top: 2px;
+                    left: 4px;
+                    color: #fff;
+                    font-size: 22px;
+                }
+                &:hover i {
+                    transform: scale(1.2);
+                }
             }
         }
 

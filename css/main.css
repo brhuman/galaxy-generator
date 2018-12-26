@@ -601,9 +601,9 @@ body {
   transition: ease-in-out .4s; }
   .about-author:hover {
     opacity: 1;
-    -webkit-transform: scale(1.55) rotate(180deg);
-    -ms-transform: scale(1.55) rotate(180deg);
-    transform: scale(1.55) rotate(180deg); }
+    -webkit-transform: scale(1.45);
+    -ms-transform: scale(1.45);
+    transform: scale(1.45); }
 
 .about-author-modal {
   display: none;
@@ -613,7 +613,7 @@ body {
   z-index: 9999;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); }
+  background: rgba(0, 0, 0, 0.6); }
   .about-author-modal.on {
     display: block; }
   .about-author-modal .modal-content {
@@ -673,3 +673,20 @@ body {
         text-align: center;
         font-size: 16px;
         line-height: 28px; }
+      .about-author-modal .modal-content .body a {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none; }
+        .about-author-modal .modal-content .body a i {
+          -webkit-transition: all .2s;
+          -o-transition: all .2s;
+          transition: all .2s;
+          position: relative;
+          top: 2px;
+          left: 4px;
+          color: #fff;
+          font-size: 22px; }
+        .about-author-modal .modal-content .body a:hover i {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2); }
