@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project template</title>
+
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+
+    <div class="preloader"></div>
+    
+    <div class="app-wrapper">
+        <div class="wrapper-bg-2"></div>
+
+        <button class="next-galaxy-button">
+            <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        
+        <!-- UI -->
+        <div class="ui-wrapper close_">
+            <!-- UI Header -->
+            <div class="ui-header ui-button-toggle">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </div>
+
+            <!-- UI Content -->
+            <div class="ui-content">
+                <div class="wrap">
+                    <div class="range-wrap">
+                        <label>Smallest stars:</label>
+                        <input type="text" id="amount-1" class="input-show" readonly >
+                        <div id="slider-range-1" class="slider-range"></div>
+                    </div>
+
+                    <div class="range-wrap">
+                        <label>Small stars:</label>
+                        <input type="text" id="amount-2" class="input-show" readonly >
+                        <div id="slider-range-2" class="slider-range"></div>
+                    </div>
+
+                    <div class="range-wrap">
+                        <label>Medium stars:</label>
+                        <input type="text" id="amount-3" class="input-show" readonly >
+                        <div id="slider-range-3" class="slider-range"></div>
+                    </div>
+
+                    <div class="range-wrap">
+                        <label>Large stars:</label>
+                        <input type="text" id="amount-4" class="input-show" readonly >
+                        <div id="slider-range-4" class="slider-range"></div>
+                    </div>
+
+                    <div class="range-wrap">
+                        <label>Nebulas:</label>
+                        <input type="text" id="amount-5" class="input-show" readonly >
+                        <div id="slider-range-5" class="slider-range"></div>
+                    </div>
+
+                    <div class="range-wrap">
+                        <label>Comets:</label>
+                        <input type="text" id="amount-6" class="input-show" readonly>
+                        <div id="slider-range-6" class="slider-range"></div>
+                    </div>
+
+                    <div class="description">
+                        <p>
+                            <span>Hot keys:</spa><br/>
+                            <b>enter</b> - new galaxy<br/>
+                            <b>space</b> - open/close settings<br/>
+                            <b>F11</b> - full screen mode
+                        </p>
+                    </div>
+
+                    <button class="about-author"><i class="fa fa-microchip" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div> <!-- UI -->
+        
+        <div class="fog-wrapper"></div>
+        <div class="star-wrapper"></div>
+        <div class="nebula-wrapper"></div>  
+        <div class="comet-wrapper"></div>
+    </div>
+
+    <div class="about-author-modal ">
+        <div class="modal-content">
+            <div class="header">
+                <button class="close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="body">
+                <p>
+                    Galaxy Generator by Maksim K.<br />
+                    brhumaan@gmail.com<br/>
+                    v 0.2
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery 3.3.1-->
+    <script src="./js/libs/jquery-3.3.1.min.js"></script>
+    <!-- jQUERY-ui -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Main script -->
+    <script src="./js/common.js"></script>
+
+    <!-- 
+        Generator by Maksim K.
+        brhumaan@gmail.com 
+    -->
+</body>
+</html>

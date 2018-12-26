@@ -1,0 +1,24 @@
+body,html {
+	height: 100%;
+	background: #fff;
+}
+
+html {  
+ text-rendering: optimizeLegibility !important;
+ -webkit-font-smoothing: antialiased !important;
+}
+
+*{
+ -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  box-sizing: border-box;
+}
+
+a:focus,
+button:focus {
+ outline: none;
+}
+
+a, button {
+	transition: all .1s;
+}
