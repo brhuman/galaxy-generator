@@ -304,6 +304,38 @@ template {
 body {
   background: #000; }
 
+.preloader {
+  z-index: 1000; }
+
+.ui-wrapper {
+  z-index: 1500; }
+  .ui-wrapper .ui-header {
+    z-index: 1510; }
+  .ui-wrapper .ui-content {
+    z-index: 1505; }
+
+.fog-wrapper {
+  z-index: 4; }
+
+.nebula-wrapper {
+  z-index: 8; }
+  .nebula-wrapper .nebula {
+    z-index: 5; }
+
+.comet-wrapper {
+  z-index: 9; }
+  .comet-wrapper .comet {
+    z-index: 5; }
+
+.star-wrapper {
+  z-index: 10; }
+
+.next-galaxy-button {
+  z-index: 2000; }
+
+.about-author-modal {
+  z-index: 9999; }
+
 .app-wrapper {
   position: relative;
   width: 100%;
@@ -322,8 +354,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #000;
-  z-index: 1000; }
+  background: #000; }
 
 .next-galaxy-button {
   position: absolute;
@@ -345,7 +376,6 @@ body {
 
 .ui-wrapper {
   position: absolute;
-  z-index: 1500;
   bottom: 0px;
   right: 0px;
   width: 500px;
@@ -361,7 +391,6 @@ body {
   overflow: hidden; }
   .ui-wrapper .ui-header {
     position: relative;
-    z-index: 1510;
     top: 2px;
     right: 20px;
     min-height: 33px;
@@ -406,7 +435,6 @@ body {
   .ui-wrapper .ui-content {
     font-family: 'Open Sans';
     position: relative;
-    z-index: 1505;
     width: 100%;
     background: black;
     border-radius: 5px 0 0 0;
@@ -414,6 +442,8 @@ body {
     padding: 30px 15px 20px;
     border-top: 1px solid #265036;
     border-left: 1px solid #265036; }
+    .ui-wrapper .ui-content .mob-deliver {
+      display: none; }
     .ui-wrapper .ui-content .description {
       color: #fff;
       text-align: center; }
@@ -481,7 +511,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 4;
   overflow: hidden; }
   .fog-wrapper .fog {
     position: absolute;
@@ -516,7 +545,6 @@ body {
 
 .star-wrapper {
   position: absolute;
-  z-index: 10;
   top: 0px;
   left: 0px;
   display: block;
@@ -541,7 +569,6 @@ body {
 
 .nebula-wrapper {
   position: absolute;
-  z-index: 8;
   top: 0px;
   left: 0px;
   display: block;
@@ -550,14 +577,12 @@ body {
   overflow: hidden; }
   .nebula-wrapper .nebula {
     position: absolute;
-    z-index: 5;
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat; }
 
 .comet-wrapper {
   position: absolute;
-  z-index: 9;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -565,7 +590,6 @@ body {
   overflow: hidden; }
   .comet-wrapper .comet {
     position: absolute;
-    z-index: 5;
     background-position: 50% 50%;
     background-size: contain !important;
     background-repeat: no-repeat !important; }
@@ -610,7 +634,6 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 9999;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6); }
@@ -690,3 +713,40 @@ body {
           -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
           transform: scale(1.2); }
+
+@media (max-width: 992px) {
+  .ui-wrapper .ui-content {
+    padding-top: 20px;
+    padding-bottom: 15px; }
+    .ui-wrapper .ui-content .range-wrap {
+      margin-bottom: 5px; }
+    .ui-wrapper .ui-content .description p {
+      font-size: 14px; }
+      .ui-wrapper .ui-content .description p span {
+        font-size: 16px; }
+  .ui-wrapper .about-author {
+    left: 3px;
+    bottom: 3px; } }
+
+@media (max-width: 768px) {
+  .next-galaxy-button {
+    top: 10px;
+    bottom: initial; }
+  .ui-wrapper {
+    width: 100%; }
+    .ui-wrapper .ui-content .wrap {
+      max-height: 60vh;
+      overflow: scroll; }
+    .ui-wrapper .ui-content .range-wrap {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .ui-wrapper .ui-content .range-wrap label {
+        text-align: right; }
+      .ui-wrapper .ui-content .range-wrap .mob-deliver {
+        display: block;
+        width: 100%; }
+      .ui-wrapper .ui-content .range-wrap .slider-range {
+        margin-top: 10px; } }

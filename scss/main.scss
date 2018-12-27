@@ -1,33 +1,54 @@
-
-// Libries
-// @import "bootstrap-3.3.7/bootstrap"; // Full bootstrap
-
-// @import "bootstrap-4.1.1/bootstrap"; // Full bootstrap
-// @import "bootstrap-4.1.1/bootstrap-grid"; // Only bootstrap grid
-// @import "bootstrap-4.1.1/bootstrap-reboot"; // only bootstrap reset
-
-
-
-// @import "slick/slick.scss"; // Slick slider
-// @import "slick/slick-theme.scss"; // Slick slider
-
 // Base
 @import "base/normalize.scss";
-// @import "base/global";
-// @import "base/buttons";
-// @import "base/fonts";
-
-// // Components
-// @import "components/header";
-// @import "components/footer"; 
-// @import "components/modals";
-
-// // Pages
-// @import "pages/home-page";
-// @import "pages/404-page"; 
 
 body {
     background: #000;
+}
+
+
+// Z-INDEX
+.preloader {
+    z-index: 1000;
+}
+
+.ui-wrapper {
+    z-index: 1500;
+    .ui-header {
+        z-index: 1510;
+    }
+    .ui-content {
+        z-index: 1505;
+    }
+}
+
+.fog-wrapper {
+    z-index: 4;
+}
+
+.nebula-wrapper {
+    z-index: 8;
+    .nebula {
+        z-index: 5;
+    }
+}
+
+.comet-wrapper {
+    z-index: 9;
+    .comet {
+        z-index: 5;
+    }
+}
+
+.star-wrapper {
+    z-index: 10;
+}
+
+.next-galaxy-button {
+    z-index: 2000;
+}
+
+.about-author-modal {
+    z-index: 9999;
 }
 
 
@@ -44,17 +65,17 @@ body {
         width: 100%;
         height: 100%;
         top: 0px;
-        left: 0px;
-        
+        left: 0px;  
     }
 } 
+
+
 
 .preloader {
     position: absolute;
     width: 100%;
     height: 100%;
     background: #000;
-    z-index: 1000;
 }
 
 .next-galaxy-button {
@@ -78,7 +99,6 @@ body {
 
 .ui-wrapper {
     position: absolute;
-    z-index: 1500;
     bottom: 0px;
     right: 0px;
     width: 500px;
@@ -90,7 +110,6 @@ body {
     
     .ui-header {
         position: relative;
-        z-index: 1510;;
         top: 2px;
         right: 20px;
         min-height: 33px;
@@ -110,9 +129,6 @@ body {
         border-right: 1px solid rgb(38, 80, 54);
         cursor: pointer;
 
-        // border-right: 1px solid #000;
-        // border-bottom: 1px solid #000;
-        
         i {
             color: #fff;
             transition: all .2s;
@@ -120,7 +136,6 @@ body {
         
         &:hover {
             opacity: 1;
-
         }
 
         &:focus,
@@ -132,46 +147,14 @@ body {
             width: 70px;
             color: #fff;
             font-size: 22px;
-            opacity: 1;
-            
+            opacity: 1; 
         }
-
-        // button {
-        //     padding: 0px;
-        //     margin: 0px;
-        //     width: 50px;
-        //     height: 50px;
-        //     top: 0px;
-        //     right: 0px;
-        //     border: none;
-        //     background: none;
-        //     color: #fff;
-        //     font-size: 25px;
-        //     cursor: pointer;
-        //     outline: none;
-            
-        //     i {
-        //         opacity: 0.5;
-        //         transition: all .1s;
-        //     }
-            
-        //     &:focus {
-        //         outline: none;
-        //     }
-            
-        //     &:hover i {
-        //         opacity: 0.7;
-        //         transform: scale(1.15)
-        //     }
-        // }
     }
-    
     
     
     .ui-content {
         font-family: 'Open Sans';
         position: relative;
-        z-index: 1505;
         width: 100%;
         background: rgb(000, 000, 000);
         border-radius: 5px 0 0 0;
@@ -179,6 +162,10 @@ body {
         padding: 30px 15px 20px;
         border-top: 1px solid rgb(38, 80, 54);
         border-left: 1px solid rgb(38, 80, 54);
+
+        .mob-deliver {
+            display: none;
+        }
         
         .description {
             color: #fff;
@@ -199,7 +186,6 @@ body {
             align-items: center;
             margin-bottom: 15px;
             
-
             label {
                 text-align:  right;
                 font-weight: 400;
@@ -214,15 +200,8 @@ body {
                 text-align: center;
                 margin-right: 20px;
             }
-            
-            // #amount {
-            //     width: 70px;
-            //     text-align: center;
-            //     margin-right: 15px;   
-            // }
 
             .input-show {
-                // font-weight: bold;
                 font-family: Arial;
                 font-size: 14px;
                 border: none;
@@ -243,7 +222,6 @@ body {
             }
 
             .slider-range {
-                // margin-top: 15px;
                 height: 8px;
             }
             
@@ -265,7 +243,6 @@ body {
         .ui-button-toggle .fa-arrow-down {
             display: none;
         } 
-        
     }
     
     
@@ -288,16 +265,13 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 4;
     overflow: hidden;
     
     .fog {
         position: absolute;
-        // left: -100px;
         max-width: 1500px;
         width: 100%;
         height: 100%;
-        
         background-position: 50% 50%;
         background-size: contain !important;
         background-repeat: no-repeat !important;
@@ -307,7 +281,6 @@ body {
 
 @keyframes fogSize {
     0% {
-        // transform: scale(1);
         transform: scaleX(1) scaleY(1);
     }
     50% {
@@ -320,14 +293,12 @@ body {
 
 .star-wrapper {
     position: absolute;
-    z-index: 10;
     top: 0px;
     left: 0px;
     display: block;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    // outline: 5px solid red;
     
     .star {
         position: absolute;
@@ -349,18 +320,15 @@ body {
 
 .nebula-wrapper {
     position: absolute;
-    z-index: 8;
     top: 0px;
     left: 0px;
     display: block;
     width: 100%;
     height: 100%;
     overflow: hidden;
-
     
     .nebula {
         position: absolute;
-        z-index: 5;
         background-position: 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -369,7 +337,6 @@ body {
 
 .comet-wrapper {
     position: absolute;
-    z-index: 9;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -378,13 +345,11 @@ body {
 
     .comet {
         position: absolute;
-        z-index: 5;
         background-position: 50% 50%;
         background-size: contain !important;
         background-repeat: no-repeat !important;
     }
 }
-
 
 
 @keyframes starOpacity {
@@ -417,14 +382,11 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 9999;
     width: 100%;
     height: 100%;
-    // outline: 2px solid #fff;
     background: rgba(0, 0, 0, .6);
 
     &.on {
-
         display: block;
     }
 
@@ -491,7 +453,62 @@ body {
                 }
             }
         }
+    }
+}
 
-       
+@media (max-width: 992px) {
+    .ui-wrapper {
+        .ui-content {
+            padding-top: 20px;
+            padding-bottom: 15px;
+            .range-wrap {
+                margin-bottom: 5px;
+            }
+            .description {
+                p {
+                    font-size: 14px;
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .about-author {
+            left: 3px;
+            bottom: 3px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .next-galaxy-button {
+        top: 10px;
+        bottom: initial;
+    }
+
+    .ui-wrapper {
+        width: 100%;
+        .ui-content {
+            .wrap {
+                max-height: 60vh;
+                overflow: scroll;
+            }
+            .range-wrap {
+               flex-wrap: wrap;
+               justify-content: center;
+               label {
+                   text-align: right;
+               }
+               .mob-deliver {
+                    display: block;
+                    width: 100%;
+                } 
+               .slider-range {
+                   margin-top: 10px;
+               }
+            }
+            
+        }
     }
 }
