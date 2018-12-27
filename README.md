@@ -1,10 +1,8 @@
-## Synopsis
-
+# Galaxy Generato
 Galaxy Generator
 
-## Motivation
-
+## Test link
 http://poskot.od.ua/galaxy/
 
-## Installation
+### Version
 v0.3
