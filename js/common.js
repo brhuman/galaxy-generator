@@ -1,13 +1,14 @@
 // Generator by Maksim K.
 // brhumaan@gmail.com
 
-// VARIABLES
+// VARIABLES for generators
 var stars_smallest;
 var stars_small;
 var stars_medium;
 var stars_largest;
 var nebula_numbers;
 var comet_numbers;
+
 var timerSeconds; // timer to next galaxy in seconds
 
 var gradientColors = [
@@ -19,7 +20,7 @@ var gradientColors = [
     '#182B26',
     '#1A2615',
     '#262515',
-    '#1C120F',// next new
+    '#1C120F',
     '#36243b',
     '#242b3b',
     '#24353b',
@@ -27,18 +28,9 @@ var gradientColors = [
     '#3b3024',
     '#393b24',
 ];
-var gradientWayBody = [
-    'top',
-    'bottom'
-];
-var gradientWayWrapper = [
-    'left',
-    'right',
-];
 
 
 //************ SLIDER INITIALIZATION:
-
 // Smallest stars
 $("#slider-range-1").slider({
     range: true,
@@ -140,21 +132,9 @@ $("#amount-7").val($("#slider-range-7").slider("value"));
 
 
 
-// When slider onChange - make variableGet
-// $(".slider-range").on("slidechange", function () { 
-//     variableGet();
-// });
-
-
-        
-
-
-
-
 // Variable Get
 variableGet();
 function variableGet() {
-    
     //stars_smallest
     var stars_smallest_arr = $("#slider-range-1").slider("option", "values");
     stars_smallest = randomNumber(stars_smallest_arr[0], stars_smallest_arr[1]);
@@ -191,17 +171,7 @@ $(".next-galaxy-button").click(function(){
     nextGalaxy();
 })
 
-
-
-// $("#foo").bind("click", nextGalaxy());
-
-// $("#foo").unbind("click", nextGalaxy());
-
-
-
-
-
-
+// Generate new galaxy
 function nextGalaxy() {
     console.log("nextGalaxy()");
     
@@ -210,9 +180,9 @@ function nextGalaxy() {
     })
 
     setTimeout(() => {
-        clearApp();
-        variableGet();
-        startMainGenerator();   
+        clearApp(); // Remove old values from HTML
+        variableGet(); // Get values from UI sliders
+        startMainGenerator(); // All units generators here
     }, 300);
 
     setTimeout(() => {
@@ -265,7 +235,6 @@ function fogGenerator() {
         'img/fog-6.png',
     ];
 
-    
     $("<div>", {
         'class': "fog",
         css: {
@@ -425,6 +394,7 @@ $(document).keypress(function (e) {
     }
 });
 
+// Toggle UI
 $(".ui-button-toggle").click(function(){
     if($('.ui-wrapper').hasClass('close_')){
         $(".ui-wrapper").removeClass('close_');
@@ -437,18 +407,13 @@ $(".ui-button-toggle").click(function(){
     }
 })
 
-
+// Close authoe modal
 $(".about-author, .about-author-modal .close").click(function(){
     $(".about-author-modal").toggleClass('on')
 })
 
 
-
-
-
-
-
-// COnvert seconds to time
+// Convert seconds to beauty time
 function secondsTimeSpanToHMS(s) {
     var h = Math.floor(s / 3600); //Get whole hours
     s -= h * 3600;
@@ -457,8 +422,7 @@ function secondsTimeSpanToHMS(s) {
     return h + ":" + (m < 10 ? '0' + m : m) + ":" + (s < 10 ? '0' + s : s); //zero padding on minutes and seconds
 }
 
-
-
+// Random number
 function randomNumber(min, max) {
     var rand = min + Math.floor(Math.random() * (max + 1 - min));
     return rand;
