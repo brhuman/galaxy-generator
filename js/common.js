@@ -27,6 +27,16 @@ var gradientColors = [
     '#243b30',
     '#3b3024',
     '#393b24',
+
+    "#18262f",
+    '#182b2f',    
+    '#182e2f',    
+    '#182f29',    
+    '#150f1f',    
+    '#180f1f',    
+    '#0f1f14',    
+    '#1f180f',    
+    '#1f0f1b',    
 ];
 
 
@@ -318,8 +328,8 @@ function bigStarGenerator(starsNumbers){
             css: {
                 "width": randomSize,
                 "height": randomSize,
-                "top": randomNumber(0, 100) + "%",
-                "left": randomNumber(0, 100) + "%",
+                "top": randomNumber(0, 1000) / 10 + "%",
+                "left": randomNumber(0, 1000) /10 + "%",
                 "backgroundColor": starColor(),
                 "animationName": starOpacityAnimation,
                 "animationDelay": randomNumber(0, 5) + 's',
@@ -352,8 +362,8 @@ function starGenerator(small, medium, large) {
                 css: {
                     "width": randomSize,
                     "height": randomSize,
-                    "top": randomNumber(0, 100) + "%",
-                    "left": randomNumber(0, 100) + "%",
+                    "top": randomNumber(0, 1000) / 10 + "%",
+                    "left": randomNumber(0, 1000) / 10 + "%",
                     "backgroundColor": starColor(),
                     "animationName": starOpacityAnimation,
                     "animationDelay": randomNumber(0,5) + 's',
