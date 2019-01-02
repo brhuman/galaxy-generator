@@ -329,7 +329,7 @@ function bigStarGenerator(starsNumbers){
                 "width": randomSize,
                 "height": randomSize,
                 "top": randomNumber(0, 1000) / 10 + "%",
-                "left": randomNumber(0, 1000) /10 + "%",
+                "left": randomNumber(0, 1000) / 10 + "%",
                 "backgroundColor": starColor(),
                 "animationName": starOpacityAnimation,
                 "animationDelay": randomNumber(0, 5) + 's',
