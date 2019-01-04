@@ -343,6 +343,14 @@ body {
   display: block;
   background-size: cover;
   background-position: 50% 50%; }
+  .app-wrapper .next-galaxy-button {
+    display: initial; }
+  .app-wrapper .ui-header {
+    display: initial; }
+  .app-wrapper.hide-ui .next-galaxy-button {
+    display: none !important; }
+  .app-wrapper.hide-ui .ui-header {
+    display: none !important; }
   .app-wrapper .wrapper-bg-2 {
     position: absolute;
     width: 100%;
@@ -445,8 +453,11 @@ body {
     .ui-wrapper .ui-content .mob-deliver {
       display: none; }
     .ui-wrapper .ui-content .description {
+      display: block;
+      margin: 0 auto;
+      max-width: 300px;
       color: #fff;
-      text-align: center; }
+      text-align: left; }
       .ui-wrapper .ui-content .description span {
         font-size: 20px;
         font-weight: bold; }
@@ -472,10 +483,15 @@ body {
         color: #fff;
         margin-right: 10px;
         width: 130px; }
-      .ui-wrapper .ui-content .range-wrap input {
+      .ui-wrapper .ui-content .range-wrap input[type="text"] {
         width: 60px;
         text-align: center;
         margin-right: 20px; }
+      .ui-wrapper .ui-content .range-wrap input[type="checkbox"] {
+        position: relative;
+        top: 2px;
+        width: 20px;
+        height: 20px; }
       .ui-wrapper .ui-content .range-wrap .input-show {
         font-family: Arial;
         font-size: 14px;

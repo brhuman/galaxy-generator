@@ -8,6 +8,7 @@ var stars_medium;
 var stars_largest;
 var nebula_numbers;
 var comet_numbers;
+var hideUi = false;
 
 var timerSeconds; // timer to next galaxy in seconds
 
@@ -23,11 +24,6 @@ var gradientColors = [
     '#1C120F',
     '#36243b',
     '#242b3b',
-    '#24353b',
-    '#243b30',
-    '#3b3024',
-    '#393b24',
-
     "#18262f",
     '#182b2f',    
     '#182e2f',    
@@ -37,6 +33,18 @@ var gradientColors = [
     '#0f1f14',    
     '#1f180f',    
     '#1f0f1b',    
+// Dark colors
+    '#000000',
+    '#0e0b06',
+    '#121107',
+    '#07120a',
+    '#091207',
+    '#071209',
+    '#07120a',
+    '#071212',
+    '#070f12',
+    '#070c12',
+    '#070912',
 ];
 
 
@@ -119,6 +127,8 @@ $("#slider-range-7").slider({
 });
 
 
+
+
 // Write values to HTML
 $("#amount-1").val($("#slider-range-1").slider("values", 0) +
     " - " + $("#slider-range-1").slider("values", 1));
@@ -140,6 +150,7 @@ $("#amount-6").val($("#slider-range-6").slider("values", 0) +
 
 $("#amount-7").val($("#slider-range-7").slider("value"));
 
+// $("#ui-hide-checkbox").prop('checked', hideUi);
 
 
 // Variable Get
@@ -171,6 +182,12 @@ function variableGet() {
 
     // Timer to next galaxy
     timerSeconds = $("#slider-range-7").slider('option','value');
+
+    // if ($('#ui-hide-checkbox').is(':checked')) {
+    //     hideUi = true;
+    // } else {
+    //     hideUi = false;
+    // }
 }
 
 // First app start
@@ -187,7 +204,7 @@ function nextGalaxy() {
     
     $(".preloader").fadeIn({
         duration: 300,
-    })
+    })  
 
     setTimeout(() => {
         clearApp(); // Remove old values from HTML
@@ -404,6 +421,13 @@ $(document).keypress(function (e) {
     }
 });
 
+$(document).keypress(function (e) {
+    if (e.which === 85 || e.which === 117) {
+        console.log("Toggle ui")
+        $("#ui-hide-checkbox").click();
+    }
+});
+
 // Toggle UI
 $(".ui-button-toggle").click(function(){
     if($('.ui-wrapper').hasClass('close_')){
@@ -421,6 +445,26 @@ $(".ui-button-toggle").click(function(){
 $(".about-author, .about-author-modal .close").click(function(){
     $(".about-author-modal").toggleClass('on')
 })
+
+document.addEventListener("keydown", function (event) {
+    console.log(event.which);
+})
+
+
+
+$("#ui-hide-checkbox").click(function () {
+    console.log('firs: ' + hideUi)
+    if (hideUi === false) {
+        hideUi = true;
+        $(".app-wrapper").addClass("hide-ui");
+        console.log(hideUi)
+    } else {
+        hideUi = false;
+        $(".app-wrapper").removeClass("hide-ui");
+        console.log(hideUi)
+    }
+})
+
 
 
 // Convert seconds to beauty time

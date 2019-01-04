@@ -6,6 +6,8 @@ body {
 }
 
 
+
+
 // Z-INDEX
 .preloader {
     z-index: 1000;
@@ -52,6 +54,7 @@ body {
 }
 
 
+
 .app-wrapper {
     position: relative;
     width: 100%;
@@ -59,6 +62,22 @@ body {
     display: block;
     background-size: cover;
     background-position: 50% 50%;  
+
+    .next-galaxy-button {
+        display: initial;
+    }
+    .ui-header {
+        display: initial;
+    }
+    
+    &.hide-ui {
+        .next-galaxy-button {
+            display: none !important;
+        }
+        .ui-header {
+            display: none !important;
+        }
+    }
 
     .wrapper-bg-2 {
         position: absolute;
@@ -68,6 +87,7 @@ body {
         left: 0px;  
     }
 } 
+
 
 
 
@@ -168,8 +188,11 @@ body {
         }
         
         .description {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
             color: #fff;
-            text-align: center;
+            text-align: left;
             span {
                 font-size: 20px;
                 font-weight: bold;
@@ -195,10 +218,17 @@ body {
                 width: 130px;
             }
 
-            input {
+            input[type="text"] {
                 width: 60px;
                 text-align: center;
                 margin-right: 20px;
+            }
+
+            input[type="checkbox"] {
+                position: relative;
+                top: 2px;
+                width: 20px;
+                height: 20px;
             }
 
             .input-show {
