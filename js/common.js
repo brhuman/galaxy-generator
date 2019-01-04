@@ -421,8 +421,9 @@ $(document).keypress(function (e) {
     }
 });
 
+// Ещппду ГШ
 $(document).keypress(function (e) {
-    if (e.which === 85 || e.which === 117) {
+    if (e.which === 85 || e.which === 117 || e.which === 1075 || e.which === 1043) {
         console.log("Toggle ui")
         $("#ui-hide-checkbox").click();
     }
