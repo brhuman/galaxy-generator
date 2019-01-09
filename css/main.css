@@ -302,7 +302,9 @@ template {
   display: none; }
 
 body {
-  background: #000; }
+  background: #000;
+  min-height: 100vh;
+  height: 100%; }
 
 .preloader {
   z-index: 1000; }
@@ -361,6 +363,7 @@ body {
 .preloader {
   position: absolute;
   width: 100%;
+  min-height: 100vh;
   height: 100%;
   background: #000; }
 
